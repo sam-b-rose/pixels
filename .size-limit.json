@@ -1,0 +1,6 @@
+[
+  {
+    "path": "packages/components/dist/polaris-components.cjs.js",
+    "limit": "50 KB"
+  }
+]

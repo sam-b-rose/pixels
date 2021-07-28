@@ -1,0 +1,21 @@
+{
+  "name": "@polaris/icons",
+  "version": "0.0.0",
+  "description": "Core icon library for building Shopify experiences.",
+  "sideEffects": false,
+  "main": "dist/polaris-icons.cjs.js",
+  "module": "dist/polaris-icons.esm.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shopify/polaris.git",
+    "directory": "packages/icons"
+  },
+  "author": "Shopify",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

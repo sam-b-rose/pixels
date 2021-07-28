@@ -1,0 +1,17 @@
+# misc
+.DS_Store
+*.pem
+
+# dependencies
+node_modules
+
+# testing
+coverage
+
+# production
+dist
+
+# log
+*.log
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,34 @@
+{
+  "name": "@polaris/components",
+  "version": "0.0.0",
+  "description": "Foundational components for building Shopify experiences.",
+  "sideEffects": false,
+  "main": "dist/polaris-components.cjs.js",
+  "module": "dist/polaris-components.esm.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shopify/polaris.git",
+    "directory": "packages/components"
+  },
+  "author": "Shopify",
+  "license": "MIT",
+  "dependencies": {
+    "@styled-system/theme-get": "^5.1.2",
+    "styled-system": "^5.1.5"
+  },
+  "devDependencies": {
+    "@types/styled-system": "^5.1.12",
+    "@types/styled-system__theme-get": "^5.0.1",
+    "react": "17.0.2"
+  },
+  "peerDependencies": {
+    "goober": ">= 2.0.39",
+    "react": ">= 17.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,8 +1,7 @@
 {
-  "name": "polaris",
+  "name": "pixels",
   "private": true,
-  "version": "0.0.0",
-  "author": "Shopify",
+  "author": "Sam Rose <samrose3@gmail.com>",
   "license": "MIT",
   "workspaces": [
     "packages/*",
@@ -14,8 +13,8 @@
     ]
   },
   "scripts": {
-    "build": "preconstruct build",
-    "build:tokens": "manypkg run @polaris/tokens build",
+    "build": "yarn build:tokens && preconstruct build",
+    "build:tokens": "manypkg run @pixels/tokens build",
     "dev": "manypkg run site dev",
     "format": "eslint . --ext .ts,.tsx --fix",
     "lint": "manypkg check && eslint . --ext .ts,.tsx && tsc",

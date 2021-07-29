@@ -1,6 +1,6 @@
 [
   {
-    "path": "packages/components/dist/polaris-components.cjs.js",
+    "path": "packages/components/dist/pixels-components.cjs.js",
     "limit": "50 KB"
   }
 ]

@@ -1,16 +1,16 @@
 {
-  "name": "@polaris/tokens",
+  "name": "@pixels/tokens",
   "version": "0.0.0",
   "description": "Design tokens for building Shopify experiences.",
   "sideEffects": false,
-  "main": "dist/polaris-tokens.cjs.js",
-  "module": "dist/polaris-tokens.esm.js",
+  "main": "dist/pixels-tokens.cjs.js",
+  "module": "dist/pixels-tokens.esm.js",
   "files": [
     "dist"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shopify/polaris.git",
+    "url": "https://github.com/Shopify/pixels.git",
     "directory": "packages/tokens"
   },
   "author": "Shopify",

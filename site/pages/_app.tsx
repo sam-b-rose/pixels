@@ -5,7 +5,7 @@ import { prefix } from 'goober-autoprefixer';
 import styledSystemShouldForwardProp from '@styled-system/should-forward-prop';
 import type { AppProps } from 'next/app';
 
-import { ThemeProvider, useTheme, theme } from '@polaris/components';
+import { ThemeProvider, useTheme, theme } from '@pixels/components';
 
 import '../styles/globals.css';
 

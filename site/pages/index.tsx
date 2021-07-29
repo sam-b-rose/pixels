@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
-import { Box, Text } from '@polaris/components';
+import { Box, Text } from '@pixels/components';
 
 export default function Home() {
   return (

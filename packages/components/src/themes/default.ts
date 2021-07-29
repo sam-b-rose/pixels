@@ -1,4 +1,4 @@
-import tokens from '@polaris/tokens';
+import tokens from '@pixels/tokens';
 
 const theme = tokens;
 

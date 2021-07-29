@@ -3,7 +3,13 @@ import colors from 'tailwindcss/colors';
 import { ThemeFn, ThemeUtils } from './types';
 
 const theme = {
-  breakpoints: ['640px', '768px', '1024px', '1280px', '1536px'],
+  screens: {
+    sm: '640px',
+    md: '768px',
+    lg: '1024px',
+    xl: '1280px',
+    '2xl': '1536px',
+  },
   colors: {
     transparent: 'transparent',
     current: 'currentColor',
@@ -142,7 +148,6 @@ const theme = {
     '3xl': '1.5rem',
     full: '9999px',
   },
-  radii: (theme: ThemeFn) => theme('borderRadius'),
   borderWidth: {
     DEFAULT: '1px',
     0: '0px',
@@ -150,7 +155,6 @@ const theme = {
     4: '4px',
     8: '8px',
   },
-  borders: (theme: ThemeFn) => theme('borderWidth'),
   boxShadow: {
     sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
     DEFAULT: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
@@ -161,7 +165,6 @@ const theme = {
     inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
     none: 'none',
   },
-  shadows: (theme: ThemeFn) => theme('boxShadow'),
   caretColor: (theme: ThemeFn) => theme('colors'),
   contrast: {
     0: '0',
@@ -806,6 +809,11 @@ const theme = {
     40: '40',
     50: '50',
   },
+  // Duplicates to satisfy the System UI theme specification
+  breakpoints: (theme: ThemeFn) => Object.values(theme('borderWidth')),
+  borders: (theme: ThemeFn) => theme('borderWidth'),
+  radii: (theme: ThemeFn) => theme('borderRadius'),
+  shadows: (theme: ThemeFn) => theme('boxShadow'),
   zIndices: (theme: ThemeFn) => theme('zIndex'),
 };
 

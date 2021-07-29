@@ -21,10 +21,10 @@
   },
   "devDependencies": {
     "@types/styled-system": "^5.1.12",
-    "@types/styled-system__theme-get": "^5.0.1",
-    "react": "17.0.2"
+    "@types/styled-system__theme-get": "^5.0.1"
   },
   "peerDependencies": {
+    "@polaris/tokens": "*",
     "goober": ">= 2.0.39",
     "react": ">= 17.0.0"
   },

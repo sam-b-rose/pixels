@@ -4,7 +4,9 @@
   "description": "Foundational components for building Shopify experiences.",
   "sideEffects": false,
   "main": "dist/pixels-components.cjs.js",
-  "module": "dist/pixels-components.esm.js",
+  "module": "dist/pixels-components.es.js",
+  "types": "dist/types/index.d.ts",
+  "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
@@ -15,11 +17,18 @@
   },
   "author": "Shopify",
   "license": "MIT",
+  "scripts": {
+    "build": "yarn build:js && yarn build:tsc",
+    "build:js": "vite build",
+    "build:tsc": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
+    "dev": "vite build --watch"
+  },
   "dependencies": {
     "@styled-system/theme-get": "^5.1.2",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
+    "@pixels/tokens": "*",
     "@types/styled-system": "^5.1.12",
     "@types/styled-system__theme-get": "^5.0.1"
   },

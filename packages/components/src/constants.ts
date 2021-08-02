@@ -20,9 +20,9 @@ export const COMMON = compose(
   styledSystem.display,
 );
 export interface SystemCommonProps
-  extends styledSystem.ColorProps<ThemeType>,
-    styledSystem.SpaceProps<ThemeType>,
-    styledSystem.DisplayProps<ThemeType> {}
+  extends styledSystem.ColorProps,
+    styledSystem.SpaceProps,
+    styledSystem.DisplayProps {}
 
 // Typography props
 const whiteSpace = system({
@@ -31,8 +31,7 @@ const whiteSpace = system({
   },
 });
 export const TYPOGRAPHY = compose(styledSystem.typography, whiteSpace);
-export interface SystemTypographyProps
-  extends styledSystem.TypographyProps<ThemeType> {
+export interface SystemTypographyProps extends styledSystem.TypographyProps {
   whiteSpace?: 'normal' | 'nowrap' | 'pre' | 'pre-wrap' | 'pre-line';
 }
 

@@ -11,6 +11,9 @@ coverage
 # production
 dist
 
+# typescript
+tsconfig.tsbuildinfo
+
 # log
 *.log
 yarn-debug.log*

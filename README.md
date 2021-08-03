@@ -1,3 +1,3 @@
 # pixels
 
-> The experience platform for Shopify.
+> The experience platform for the web.

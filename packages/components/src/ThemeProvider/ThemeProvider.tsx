@@ -1,4 +1,4 @@
-import { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
 import { ThemeType } from '../constants';
 
 type Theme = Partial<ThemeType>;

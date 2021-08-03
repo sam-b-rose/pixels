@@ -13,6 +13,7 @@
     "dev": "lerna run --parallel --scope @pixels/* --scope site dev",
     "format": "eslint . --ext .ts,.tsx --fix",
     "lint": "manypkg check && eslint . --ext .ts,.tsx && tsc",
+    "site:dev": "manypkg run site dev",
     "site:build": "manypkg run site build",
     "site:start": "manypkg run site start",
     "size": "size-limit",

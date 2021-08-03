@@ -10,10 +10,12 @@ export default defineConfig({
     },
     outDir: './dist',
     rollupOptions: {
-      external: ['react'],
+      external: ['react', 'goober', '@pixels/tokens'],
       output: {
         globals: {
           react: 'React',
+          goober: 'Goober',
+          '@pixels/tokens': 'PixelsTokens',
         },
       },
     },

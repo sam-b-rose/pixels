@@ -12,6 +12,7 @@
     "@styled-system/should-forward-prop": "^5.1.5",
     "@pixels/components": "*",
     "@pixels/tokens": "*",
+    "goober": "^2.0.39",
     "next": "11.0.1"
   },
   "devDependencies": {

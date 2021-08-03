@@ -6,7 +6,12 @@
   "main": "dist/pixels-tokens.cjs.js",
   "module": "dist/pixels-tokens.es.js",
   "types": "dist/types/index.d.ts",
-  "typings": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/pixels-tokens.es.js",
+      "require": "./dist/pixels-tokens.cjs.js"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -20,7 +25,7 @@
   "scripts": {
     "build": "yarn build:tokens && yarn build:js && yarn build:tsc",
     "build:js": "vite build",
-    "build:tokens": "ts-node ./src/build.ts",
+    "build:tokens": "ts-node scripts/build.ts",
     "build:tsc": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
     "watch": "vite build --watch"
   },

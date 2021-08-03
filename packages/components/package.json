@@ -6,7 +6,12 @@
   "main": "dist/pixels-components.cjs.js",
   "module": "dist/pixels-components.es.js",
   "types": "dist/types/index.d.ts",
-  "typings": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/pixels-components.es.js",
+      "require": "./dist/pixels-components.cjs.js"
+    }
+  },
   "files": [
     "dist"
   ],

@@ -1,7 +1,7 @@
 {
   "name": "pixels",
   "private": true,
-  "author": "Sam Rose <samrose3@gmail.com>",
+  "author": "Shopify",
   "license": "MIT",
   "workspaces": [
     "examples/*",

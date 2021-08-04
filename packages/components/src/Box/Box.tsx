@@ -1,23 +1,45 @@
-import { ComponentProps } from 'react';
-import { styled } from 'goober';
-
+import clsx, { ClassValue } from 'clsx';
 import {
-  COMMON,
-  CommonProps,
-  FLEX,
-  LAYOUT,
-  SystemCommonProps,
-  SystemFlexProps,
-  SystemLayoutProps,
-} from '../constants';
+  createElement,
+  forwardRef,
+  AllHTMLAttributes,
+  ElementType,
+} from 'react';
+import { atoms, Atoms } from '@pixels/css';
 
-const Box = styled('div')<
-  CommonProps & SystemCommonProps & SystemFlexProps & SystemLayoutProps
->`
-  ${COMMON}
-  ${FLEX}
-  ${LAYOUT}
-`;
+export interface BoxProps
+  extends Omit<
+      AllHTMLAttributes<HTMLElement>,
+      'height' | 'width' | 'color' | 'className'
+    >,
+    Atoms {
+  component?: ElementType;
+  className?: ClassValue;
+}
 
-export type BoxProps = ComponentProps<typeof Box>;
-export default Box;
+export const Box = forwardRef<HTMLElement, BoxProps>(
+  ({ component = 'div', className, ...props }: BoxProps, ref) => {
+    const atomProps: Record<string, unknown> = {};
+    const nativeProps: Record<string, unknown> = {};
+
+    for (const key in props) {
+      if (atoms.properties.has(key as keyof Atoms)) {
+        atomProps[key] = props[key as keyof typeof props];
+      } else {
+        nativeProps[key] = props[key as keyof typeof props];
+      }
+    }
+
+    const userClasses = clsx(className);
+    const atomicClasses = atoms(atomProps);
+
+    return createElement(component, {
+      ...props,
+      className: `${atomicClasses}${userClasses ? ` ${userClasses}` : ''}`,
+      ...nativeProps,
+      ref,
+    });
+  },
+);
+
+Box.displayName = 'Box';

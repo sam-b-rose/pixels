@@ -7,11 +7,11 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       formats: ['es', 'cjs'],
-      fileName: (format) => `pixels-components.${format}.js`,
+      fileName: (format) => `pixels-css.${format}.js`,
     },
     outDir: './dist',
     rollupOptions: {
-      external: ['react'],
+      external: ['@pixels/tokens'],
     },
   },
   plugins: [vanillaExtractPlugin()],

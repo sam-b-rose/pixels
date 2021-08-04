@@ -1,24 +1,18 @@
 {
-  "name": "@pixels/components",
+  "name": "@pixels/css",
   "version": "0.0.0",
-  "description": "Foundational components for building Shopify experiences.",
+  "description": "Atomic CSS and reset styles for building Shopify experiences.",
   "sideEffects": false,
-  "main": "dist/pixels-components.cjs.js",
-  "module": "dist/pixels-components.es.js",
+  "main": "dist/pixels-css.cjs.js",
+  "module": "dist/pixels-css.es.js",
   "types": "dist/types/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/pixels-components.es.js",
-      "require": "./dist/pixels-components.cjs.js"
-    }
-  },
   "files": [
     "dist"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Shopify/pixels.git",
-    "directory": "packages/components"
+    "directory": "packages/css"
   },
   "author": "Shopify",
   "license": "MIT",
@@ -28,12 +22,8 @@
     "build:tsc": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
     "dev": "vite build --watch"
   },
-  "dependencies": {
-    "@pixels/css": "*",
-    "clsx": "^1.1.1"
-  },
-  "peerDependencies": {
-    "react": ">= 17.0.0"
+  "devDependencies": {
+    "@pixels/tokens": "*"
   },
   "publishConfig": {
     "access": "public"

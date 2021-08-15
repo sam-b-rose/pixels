@@ -7,7 +7,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       formats: ['es', 'cjs'],
-      fileName: (format) => `pixels-css.${format}.js`,
+      fileName: (format) => `pixels-themes.${format}.js`,
     },
     outDir: './dist',
   },

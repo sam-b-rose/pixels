@@ -5,7 +5,7 @@ import {
   AllHTMLAttributes,
   ElementType,
 } from 'react';
-import { atoms, Atoms } from '@pixels/css';
+import { atoms, Atoms, sprinkles } from '@pixels/css';
 
 export interface BoxProps
   extends Omit<
@@ -23,7 +23,7 @@ export const Box = forwardRef<HTMLElement, BoxProps>(
     const nativeProps: Record<string, unknown> = {};
 
     for (const key in props) {
-      if (atoms.properties.has(key as keyof Atoms)) {
+      if (sprinkles.properties.has(key as keyof Omit<Atoms, 'reset'>)) {
         atomProps[key] = props[key as keyof typeof props];
       } else {
         nativeProps[key] = props[key as keyof typeof props];
@@ -34,7 +34,6 @@ export const Box = forwardRef<HTMLElement, BoxProps>(
     const atomicClasses = atoms(atomProps);
 
     return createElement(component, {
-      ...props,
       className: `${atomicClasses}${userClasses ? ` ${userClasses}` : ''}`,
       ...nativeProps,
       ref,

@@ -1,10 +1,10 @@
 {
-  "name": "@pixels/css",
+  "name": "@pixels/themes",
   "version": "0.0.0",
-  "description": "Atomic CSS and reset styles for building Shopify experiences.",
+  "description": "vanilla-extract themes for styling Shopify experiences.",
   "sideEffects": false,
-  "main": "dist/pixels-css.cjs.js",
-  "module": "dist/pixels-css.es.js",
+  "main": "dist/pixels-themes.cjs.js",
+  "module": "dist/pixels-themes.es.js",
   "types": "dist/types/index.d.ts",
   "files": [
     "dist"
@@ -12,7 +12,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Shopify/pixels.git",
-    "directory": "packages/css"
+    "directory": "packages/themes"
   },
   "author": "Shopify",
   "license": "MIT",
@@ -23,11 +23,12 @@
     "dev": "vite build --watch"
   },
   "dependencies": {
-    "@pixels/themes": "*",
-    "dedent": "^0.7.0"
-  },
-  "devDependencies": {
-    "@types/dedent": "^0.7.0"
+    "@pixels/tokens": "*",
+    "capsize": "^2.0.0",
+    "gradient-parser": "^1.0.2",
+    "lodash": "^4.17.21",
+    "polished": "^4.1.3",
+    "utility-types": "^3.10.0"
   },
   "publishConfig": {
     "access": "public"

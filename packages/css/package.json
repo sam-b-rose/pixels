@@ -6,6 +6,16 @@
   "main": "dist/pixels-css.cjs.js",
   "module": "dist/pixels-css.es.js",
   "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/pixels-css.es.js",
+      "require": "./dist/pixels-css.cjs.js"
+    },
+    "./styles": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
   "files": [
     "dist"
   ],

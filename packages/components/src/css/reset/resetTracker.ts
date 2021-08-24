@@ -14,7 +14,7 @@ export const ensureResetImported = () => {
       This ensures the CSS reset does not override the component styles. 
     
       e.g.
-      import '@pixels/css/reset'; // <-- Must be first
+      import '@pixels/components/reset'; // <-- Must be first
       import { PixelsProvider, Box } from '@pixels/components';
     `);
   }

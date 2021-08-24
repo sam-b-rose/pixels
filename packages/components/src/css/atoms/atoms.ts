@@ -1,6 +1,5 @@
-import { vars } from '@pixels/themes';
+import { vars } from '../../themes';
 import * as resetStyles from '../reset/reset.css';
-
 import { sprinkles, RequiredResponsiveValue } from './sprinkles.css';
 
 type Sprinkles = Parameters<typeof sprinkles>[0];

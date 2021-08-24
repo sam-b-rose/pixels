@@ -7,7 +7,7 @@ import {
   createNormalizeValueFn,
 } from '@vanilla-extract/sprinkles';
 
-import { breakpoints, breakpointNames, Breakpoint } from '@pixels/themes';
+import { breakpoints, breakpointNames, Breakpoint } from '../../themes';
 
 import {
   responsiveProperties,

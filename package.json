@@ -11,8 +11,10 @@
   "scripts": {
     "build": "lerna run build --scope @pixels/*",
     "dev": "cd site && yarn dev",
+    "start": "yarn dev",
     "format": "eslint . --ext .ts,.tsx --fix",
     "lint": "eslint . --ext .ts,.tsx && tsc",
+    "postinstall": "lerna bootstrap",
     "size": "size-limit",
     "release": "yarn build && changeset publish",
     "test": "jest",

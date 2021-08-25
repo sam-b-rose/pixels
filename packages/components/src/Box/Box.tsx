@@ -5,7 +5,7 @@ import {
   AllHTMLAttributes,
   ElementType,
 } from 'react';
-import { atoms, Atoms, sprinkles } from '@pixels/css';
+import { atoms, Atoms, sprinkles } from '../css';
 
 export interface BoxProps
   extends Omit<

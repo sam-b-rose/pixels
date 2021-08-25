@@ -1,16 +1,11 @@
 import React from 'react';
-import { light } from '@pixels/themes';
-import { Box, BoxProps } from '@pixels/components';
+import { Box, BoxProps } from '../../../../packages/components/src/Box';
 
 import * as styles from './Navbar.css';
 
 const Layout = ({ className, ...props }: BoxProps) => {
   return (
-    <Box
-      component="nav"
-      className={[light.vanillaTheme, styles.root, className]}
-      {...props}
-    />
+    <Box component="nav" className={[styles.root, className]} {...props} />
   );
 };
 

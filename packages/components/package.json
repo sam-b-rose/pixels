@@ -1,36 +1,30 @@
 {
   "name": "@pixels/components",
   "version": "0.0.0",
-  "description": "Foundational components for building Shopify experiences.",
-  "sideEffects": false,
-  "main": "dist/pixels-components.cjs.js",
-  "module": "dist/pixels-components.es.js",
-  "types": "dist/types/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/pixels-components.es.js",
-      "require": "./dist/pixels-components.cjs.js"
-    }
-  },
-  "files": [
-    "dist"
-  ],
+  "description": "Foundational components for building Pixels experiences.",
+  "main": "./src/index.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shopify/pixels.git",
+    "url": "https://github.com/samrose3/pixels.git",
     "directory": "packages/components"
   },
-  "author": "Shopify",
+  "author": "Sam Rose <samrose3@gmail.com",
   "license": "MIT",
   "scripts": {
     "build": "yarn build:js && yarn build:tsc",
     "build:js": "vite build",
-    "build:tsc": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
-    "dev": "vite build --watch"
+    "build:tsc": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types"
   },
   "dependencies": {
-    "@pixels/css": "*",
-    "clsx": "^1.1.1"
+    "@vanilla-extract/css": "^1.2.1",
+    "@vanilla-extract/sprinkles": "^1.0.0",
+    "capsize": "^2.0.0",
+    "clsx": "^1.1.1",
+    "dedent": "^0.7.0",
+    "gradient-parser": "^1.0.2",
+    "lodash": "^4.17.21",
+    "polished": "^4.1.3",
+    "utility-types": "^3.10.0"
   },
   "peerDependencies": {
     "react": ">= 17.0.0"

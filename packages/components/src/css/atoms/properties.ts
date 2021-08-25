@@ -1,4 +1,4 @@
-import { vars } from '@pixels/themes';
+import { vars } from '../../themes';
 
 const sizes = {
   full: '100%',

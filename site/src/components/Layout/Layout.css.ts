@@ -1,6 +1,5 @@
 import { style, composeStyles } from '@vanilla-extract/css';
-import { atoms } from '@pixels/css';
-import { vars } from '@pixels/themes';
+import { atoms, vars } from '../../../../packages/components/src';
 
 export const root = composeStyles(
   atoms({ margin: 'medium' }),

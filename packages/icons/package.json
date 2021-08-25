@@ -1,7 +1,7 @@
 {
   "name": "@pixels/icons",
   "version": "0.0.0",
-  "description": "Core icon library for building Shopify experiences.",
+  "description": "Core icon library for building Pixels experiences.",
   "sideEffects": false,
   "main": "dist/pixels-icons.cjs.js",
   "module": "dist/pixels-icons.esm.js",
@@ -10,10 +10,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shopify/pixels.git",
+    "url": "https://github.com/samrose3/pixels.git",
     "directory": "packages/icons"
   },
-  "author": "Shopify",
+  "author": "Sam Rose <samrose3@gmail.com",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

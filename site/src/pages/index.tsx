@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box } from '@pixels/components';
+import { Box } from '../../../packages/components/src/Box';
 
 import { Layout } from '../components/Layout';
 import { Navbar } from '../components/Navbar';

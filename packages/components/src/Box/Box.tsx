@@ -1,24 +1,19 @@
 import clsx, { ClassValue } from 'clsx';
-import {
-  createElement,
-  forwardRef,
-  AllHTMLAttributes,
-  ElementType,
-} from 'react';
+import React from 'react';
 import { atoms, Atoms, sprinkles } from '../css';
 
 export interface BoxProps
   extends Omit<
-      AllHTMLAttributes<HTMLElement>,
-      'height' | 'width' | 'color' | 'className'
+      React.AllHTMLAttributes<HTMLElement>,
+      'height' | 'width' | 'color' | 'as' | 'className'
     >,
     Atoms {
-  component?: ElementType;
+  as?: React.ElementType;
   className?: ClassValue;
 }
 
-export const Box = forwardRef<HTMLElement, BoxProps>(
-  ({ component = 'div', className, ...props }: BoxProps, ref) => {
+export const Box = React.forwardRef<HTMLElement, BoxProps>(
+  ({ as: Component = 'div', className, ...props }: BoxProps, ref) => {
     const atomProps: Record<string, unknown> = {};
     const nativeProps: Record<string, unknown> = {};
 
@@ -33,11 +28,13 @@ export const Box = forwardRef<HTMLElement, BoxProps>(
     const userClasses = clsx(className);
     const atomicClasses = atoms(atomProps);
 
-    return createElement(component, {
-      className: `${atomicClasses}${userClasses ? ` ${userClasses}` : ''}`,
-      ...nativeProps,
-      ref,
-    });
+    return (
+      <Component
+        ref={ref}
+        className={`${atomicClasses}${userClasses ? ` ${userClasses}` : ''}`}
+        {...nativeProps}
+      />
+    );
   },
 );
 

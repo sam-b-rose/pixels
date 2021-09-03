@@ -1,6 +1,6 @@
 import React from 'react';
-import lightTheme from '../../../../packages/components/themes/light';
-import { Box, BoxProps } from '../../../../packages/components/src/Box';
+import lightTheme from '@pixels/components/themes/light';
+import { Box, BoxProps } from '@pixels/components';
 
 import * as styles from './Layout.css';
 

@@ -19,7 +19,7 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "downlevelIteration": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
   },
   "exclude": ["node_modules"],
   "include": [

@@ -1,4 +1,4 @@
-import { atoms } from '../../../../packages/components/src';
+import { atoms } from '@pixels/components';
 
 export const root = atoms({
   display: 'flex',

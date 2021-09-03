@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box } from '../../../packages/components/src/Box';
+import { Box } from '@pixels/components';
 
 import { Layout } from '../components/Layout';
 import { Navbar } from '../components/Navbar';
@@ -17,20 +17,24 @@ const IndexPage = () => {
         </ul>
       </Navbar>
       <header>
-        <Box component="p" margin="medium">
+        <Box as="p" margin="medium">
           Hello Vite + React!
         </Box>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <Box
+            as="button"
+            type="button"
+            onClick={() => setCount((count) => count + 1)}
+          >
             count is: {count}
-          </button>
+          </Box>
         </p>
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
         <p>
           <Box
-            component="a"
+            as="a"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
@@ -39,7 +43,7 @@ const IndexPage = () => {
           </Box>
           {' | '}
           <Box
-            component="a"
+            as="a"
             href="https://vitejs.dev/guide/features.html"
             target="_blank"
             rel="noopener noreferrer"

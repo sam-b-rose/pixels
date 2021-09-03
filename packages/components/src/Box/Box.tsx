@@ -1,19 +1,19 @@
-import clsx, { ClassValue } from 'clsx';
 import React from 'react';
+import clsx, { ClassValue } from 'clsx';
+import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import { atoms, Atoms, sprinkles } from '../css';
 
-export interface BoxProps
-  extends Omit<
-      React.AllHTMLAttributes<HTMLElement>,
-      'height' | 'width' | 'color' | 'as' | 'className'
-    >,
-    Atoms {
-  as?: React.ElementType;
-  className?: ClassValue;
-}
+type BoxComponent = Polymorphic.ForwardRefComponent<
+  'div',
+  Atoms & {
+    className?: ClassValue;
+  }
+>;
 
-export const Box = React.forwardRef<HTMLElement, BoxProps>(
-  ({ as: Component = 'div', className, ...props }: BoxProps, ref) => {
+export type BoxProps = Polymorphic.OwnProps<BoxComponent>;
+
+export const Box = React.forwardRef(
+  ({ as: Component = 'div', className, ...props }, ref) => {
     const atomProps: Record<string, unknown> = {};
     const nativeProps: Record<string, unknown> = {};
 
@@ -36,6 +36,6 @@ export const Box = React.forwardRef<HTMLElement, BoxProps>(
       />
     );
   },
-);
+) as BoxComponent;
 
 Box.displayName = 'Box';

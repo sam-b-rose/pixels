@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box } from '@pixels/components';
+import { Box, Button } from '@pixels/components';
 
 import { Layout } from '../components/Layout';
 import { Navbar } from '../components/Navbar';
@@ -21,17 +21,18 @@ const IndexPage = () => {
           Hello Vite + React!
         </Box>
         <p>
-          <Box
-            as="button"
+          <Button
+            size="small"
+            variant="primary"
             type="button"
             onClick={() => setCount((count) => count + 1)}
           >
             count is: {count}
-          </Box>
+          </Button>
         </p>
-        <p>
+        <Box as="p">
           Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
+        </Box>
         <p>
           <Box
             as="a"
